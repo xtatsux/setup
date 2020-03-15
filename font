@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euxo pipefail
+
+tools/brew-cask-install font-ricty-diminished
+fc-cache -vf

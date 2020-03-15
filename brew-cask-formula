@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euxo pipefail
+
+formulas=( \
+  docker \
+  iterm2 \
+  google-chrome \
+  firefox \
+  slack \
+  dropbox \
+  java \
+)
+
+for formula in "${formulas[@]}"; do
+  tools/brew-cask-install "$formula"
+done
