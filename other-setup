@@ -1,0 +1,36 @@
+#!/bin/bash
+set -euxo pipefail
+
+# install prezto
+[ ! -d ~/.zprezto ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+
+# install tmux-powerline
+[ ! -d ~/tool/tmux-powerline ] && git clone git://github.com/erikw/tmux-powerline.git ~/tool/tmux-powerline
+
+# If the execution environment is mac, execute the following command.
+if [ "$(uname)" == 'Darwin' ]; then
+
+    # install Homebrew modules.
+    brew update
+
+    # Update already-installed formula
+    brew upgrade
+
+    # Install toolset based on Brewfile
+    brew bundle --global
+
+    # Remove outdated versions
+    brew cleanup
+
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
+
+# install go app
+go get -u github.com/motemen/ghq
+go get -u github.com/typester/gh-open
+
+# install npm modules
+# todo

@@ -17,3 +17,4 @@ export XDG_DATA_HOME=~/.share
 ./brew-cask-formula
 ./font
 ./ruby
+./other-setup
