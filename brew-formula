@@ -21,7 +21,7 @@ gibo \
 git \
 go \
 graphviz \
-heroku \
+heroku/brew/heroku \
 hub \
 hugo  \
 jq  \
