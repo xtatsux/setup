@@ -5,9 +5,6 @@ brew update
 
 formulas=( \
 cloudfoundry/tap/cf-cli \
-homebrew/cask \
-homebrew/cask-fonts \
-homebrew/core \
 ansible \
 autoconf \
 autojump \
