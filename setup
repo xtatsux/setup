@@ -10,11 +10,20 @@ export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.share
 
 ./dotfiles
-#./macos
 
+# If the execution environment is mac, execute the following command.
+if [ "$(uname)" == 'Darwin' ]; then
+
+#./macos
 ./brew
 ./brew-formula
 ./brew-cask-formula
+
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
+
 ./font
 ./ruby
 ./other-setup
