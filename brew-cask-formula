@@ -5,10 +5,11 @@ formulas=( \
   docker \
   iterm2 \
   google-chrome \
-  firefox \
   slack \
   dropbox \
   java \
+  visual-studio-code \
+  vivaldi \
 )
 
 for formula in "${formulas[@]}"; do
