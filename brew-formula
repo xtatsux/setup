@@ -43,6 +43,7 @@ vim \
 wget \
 zsh \
 zsh-completions \
+shellcheck \
 )
 
 if ! command -v node >/dev/null 2>&1; then
