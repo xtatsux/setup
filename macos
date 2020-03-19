@@ -28,7 +28,7 @@ sudo spctl --master-disable
 defaults write NSGlobalDomain com.apple.sound.beep.volume -int 0
 
 # Finder
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+# defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
@@ -75,71 +75,23 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock largesize -int 54
 defaults write com.apple.dock mineffect -string "scale"
-defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock show-recents -bool false
-write-dock-apps() {
-  target=$1
-  shift
-  apps=()
-  for app in "$@"; do
-    tile_type="file-tile"
-    if [[ "$app" == /Applications/ ]]; then
-      tile_type="directory-tile"
-    fi
-    apps+=("
-      <dict>
-        <key>tile-data</key>
-        <dict>
-          <key>file-data</key>
-          <dict>
-            <key>_CFURLString</key> <string>file://$app</string>
-            <key>_CFURLStringType</key> <integer>15</integer>
-          </dict>
-          <key>file-label</key> <string>$(basename "$app" | sed 's/%20/ /g; s/[.]app//g')</string>
-        </dict>
-        <key>tile-type</key> <string>$tile_type</string>
-      </dict>
-    ")
-  done
-  defaults write com.apple.dock "$target" -array "${apps[@]}"
-}
-write-dock-apps persistent-apps \
-  /Applications/iTerm.app/ \
-  /Applications/Google%20Chrome.app/ \
-  /Applications/Slack.app/ \
-  /Applications/Safari.app/ \
-  /Applications/Firefox.app/ \
-  /Applications/XCode.app/ \
-  /System/Applications/Notes.app/ \
-  /System/Applications/Utilities/Activity%20Monitor.app/ \
-  /System/Applications/System%20Preferences.app/
-write-dock-apps persistent-others /Applications/
+defaults write com.apple.dock static-only -boolean true
 osascript -e 'tell application "Dock" to quit'
 
 # Hide the battery percentage from the menu bar
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Screenshot
 defaults write com.apple.screencapture type png
 defaults write com.apple.screencapture disable-shadow -bool true
-mkdir -p ~/Documents/screenshots
-defaults write com.apple.screencapture location ~/Documents/screenshots
+mkdir -p ~/Pictures/screenshot
+defaults write com.apple.screencapture location ~/Pictures/screenshot
 
 # Key
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
-defaults write NSGlobalDomain KeyRepeat -int 2
-
-# Remap keys (ref: https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
-keyboardid=$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | tr '\n' '-' && echo 0) || :
-if [[ -n "$keyboardid" ]]; then
-  # Caps Lock 0x39 -> Left Control 0xe0
-  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.$keyboardid" -array \
-    '<dict>
-      <key>HIDKeyboardModifierMappingSrc</key> <integer>0x700000039</integer>
-      <key>HIDKeyboardModifierMappingDst</key> <integer>0x7000000e0</integer>
-    </dict>'
-fi
+#defaults write NSGlobalDomain InitialKeyRepeat -int 25
+#defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Change system language to English, and Japanese
 defaults write -g AppleLanguages -array en ja
