@@ -14,7 +14,7 @@ export XDG_DATA_HOME=~/.share
 # If the execution environment is mac, execute the following command.
 if [ "$(uname)" == 'Darwin' ]; then
 
-./macos
+#./macos
 ./brew
 ./brew-formula
 ./brew-cask-formula
