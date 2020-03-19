@@ -19,6 +19,7 @@ if [ "$(uname)" == 'Darwin' ]; then
 ./brew-formula
 ./brew-cask-formula
 ./mas-cli-formula
+./install-pam
 
 else
   echo "Your platform ($(uname -a)) is not supported."
