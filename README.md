@@ -26,7 +26,7 @@ Touch Barのカスタマイズ方法
   * [tfenvを用いたterraformのインストール方法](https://qiita.com/sasshi_i/items/b5117d51fed800fa6b09)
 * iTerm font setting:link is my notion note.
   * [iTerm2のフォントを見やすく変更してみた - Qiita](https://www.notion.so/xtatsux/iTerm2-Qiita-7783e0ada3764a729581c02d6af763bd)
-* sudoをTouchIDで利用できるようにする
+* sudoをTouchIDで利用できるようにする→セットアップスクリプトに組み込んだ
   * [MacのTerminalでsudo実行時にタッチIDを使用する方法 ｜ Developers.IO](https://www.notion.so/xtatsux/Mac-Terminal-sudo-ID-Developers-IO-76d80ecc31924d74a03c83843a37c7de)
 
 ## Tips
