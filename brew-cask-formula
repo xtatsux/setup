@@ -2,6 +2,8 @@
 set -euxo pipefail
 
 formulas=( \
+  1password \
+  Alfred \
   docker \
   iterm2 \
   google-chrome \
@@ -10,6 +12,24 @@ formulas=( \
   java \
   visual-studio-code \
   vivaldi \
+  bartender \
+  google-backup-and-sync \
+  bettertouchtool \
+  boostnote \
+  box-drive \
+  box-edit \
+  clipy \
+  discord \
+  drawio \
+  dropbox \
+  karabiner-elements \
+  kindle \
+  microsoft-edge \
+  notion \
+  sourcetree \
+  textexpander \
+  vlc \
+  atok \
 )
 
 for formula in "${formulas[@]}"; do
