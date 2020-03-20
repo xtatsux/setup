@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap "cloudfoundry/tap"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -45,6 +46,7 @@ brew "shellcheck"
 brew "ghq"
 brew "zsh-completions"
 brew "cloudfoundry/tap/cf-cli"
+brew "heroku/brew/heroku"
 brew "sanemat/font/ricty"
 cask "docker"
 cask "font-ricty-diminished"
