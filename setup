@@ -16,9 +16,11 @@ if [ "$(uname)" == 'Darwin' ]; then
 
 ./macos
 ./brew
-./brew-formula
-./brew-cask-formula
-./mas-cli-formula
+#./brew-formula
+#./brew-cask-formula
+#./mas-cli-formula
+#./font
+brew bundle install
 ./install-pam
 
 else
@@ -26,6 +28,5 @@ else
   exit 1
 fi
 
-./font
 ./ruby
 ./other-setup
