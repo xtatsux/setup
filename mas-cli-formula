@@ -2,7 +2,6 @@
 set -euxo pipefail
 
 # ref `mas list`
-#866773894 Quiver (3.2.7)
 #406056744 Evernote (7.14)
 #409183694 Keynote (9.2.1)
 #405399194 Kindle (1.28.0)
@@ -31,7 +30,6 @@ set -euxo pipefail
 #1480793815 GoodNotes (5.4.9)
 
 formulas=( \
-866773894 \
 406056744 \
 409183694 \
 405399194 \
