@@ -29,5 +29,5 @@ else
   exit 1
 fi
 
-./ruby
+#./ruby
 ./other-setup
