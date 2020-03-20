@@ -7,7 +7,6 @@ formulas=( \
   docker \
   iterm2 \
   google-chrome \
-  slack \
   dropbox \
   java \
   visual-studio-code \
@@ -23,7 +22,6 @@ formulas=( \
   drawio \
   dropbox \
   karabiner-elements \
-  kindle \
   microsoft-edge \
   notion \
   sourcetree \
