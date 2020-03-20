@@ -8,7 +8,7 @@ tools/git-clone https://github.com/xtatsux/dotfiles "$target"
 for f in  .zshrc .gitconfig .gitignore .vimrc .gvimrc .tmux.conf .tmux-powerlinerc; do
   tools/make-symlink "$target/$f" ~/"$f"
 done
-for f in .zpreztorc .zlogin .zlogout .zshenv .zprofile; do
+for f in .zshrc .zpreztorc .zlogin .zlogout .zshenv .zprofile; do
   tools/make-symlink "$target/$f" "$ZDOTDIR/$f"
 done
 
