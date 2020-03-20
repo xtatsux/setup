@@ -1,15 +1,16 @@
 #!/bin/bash
 set -euxo pipefail
 
-target=$XDG_CONFIG_HOME/dotfiles
+target=$XDG_CONFIG_HOME/src/github.com/xtatsux/dotfiles
 
 tools/git-clone https://github.com/xtatsux/dotfiles "$target"
 
-for f in  .zshrc .gitconfig .gitignore .vimrc .gvimrc .tmux.conf .tmux-powerlinerc .zlogin .zlogout .zpreztorc .zshenv .zprofile; do
+for f in  .zshrc .gitconfig .gitignore .vimrc .gvimrc .tmux.conf .tmux-powerlinerc; do
   tools/make-symlink "$target/$f" ~/"$f"
 done
-tools/make-symlink "$target/.vimrc.yaml" "$XDG_CONFIG_HOME/miv/config.yaml"
-tools/make-symlink "$target/.irbrc" "$XDG_CONFIG_HOME/irb/irbrc"
+for f in .zpreztorc .zlogin .zlogout .zshenv .zprofile; do
+  tools/make-symlink "$target/$f" "$ZDOTDIR/$f"
+done
 
 mkdir -p "$XDG_CACHE_HOME"/vim/{swap,backup,undo}
 mkdir -p "$XDG_DATA_HOME"/vim
