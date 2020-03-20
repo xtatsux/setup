@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euxo pipefail
-
-tools/brew-cask-install homebrew/cask-fonts/font-ricty-diminished
-fc-cache -vf
