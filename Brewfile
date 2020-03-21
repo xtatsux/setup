@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 
+tap "aws/tap"
 tap "cloudfoundry/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -45,6 +46,7 @@ brew "rust"
 brew "shellcheck"
 brew "ghq"
 brew "zsh-completions"
+brew "aws/tap/aws-sam-cli"
 brew "cloudfoundry/tap/cf-cli"
 brew "heroku/brew/heroku"
 brew "sanemat/font/ricty"
