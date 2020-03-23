@@ -79,6 +79,7 @@ cask "sourcetree"
 cask "textexpander"
 cask "vlc"
 cask "atok"
+cask "deepl"
 mas "Day One", id: 1055511498
 mas "Evernote", id: 406056744
 mas "Fantastical", id: 975937182
