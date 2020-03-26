@@ -9,4 +9,4 @@ set -euxo pipefail
 
 # setup git-secrets
 git secrets --install ~/.git-templates/git-secrets
-git config --global init.templatedir '~/.git-templates/git-secrets'
+git config --global init.templatedir "$HOME/.git-templates/git-secrets"
