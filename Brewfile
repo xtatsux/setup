@@ -84,27 +84,27 @@ cask "vlc"
 cask "atok"
 cask "deepl"
 cask "masscode"
-mas "Day One", id: 1055511498
-mas "Evernote", id: 406056744
-mas "Fantastical", id: 975937182
-mas "GoodNotes", id: 1480793815
-mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
-mas "Jump Desktop", id: 524141863
-mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft OneNote", id: 784801555
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft Word", id: 462054704
-mas "Numbers", id: 409203825
-mas "OmniFocus", id: 1346203938
-mas "OneDrive", id: 823766827
-mas "Pages", id: 409201541
-mas "PopClip", id: 445189367
-mas "Scrivener 3", id: 1310686187
-mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
-mas "The Unarchiver", id: 425424353
+# mas "Day One", id: 1055511498
+# mas "Evernote", id: 406056744
+# mas "Fantastical", id: 975937182
+# mas "GoodNotes", id: 1480793815
+# mas "iA Writer", id: 775737590
+# mas "iMovie", id: 408981434
+# mas "Jump Desktop", id: 524141863
+# mas "Keynote", id: 409183694
+# mas "Kindle", id: 405399194
+# mas "Microsoft Excel", id: 462058435
+# mas "Microsoft OneNote", id: 784801555
+# mas "Microsoft Outlook", id: 985367838
+# mas "Microsoft PowerPoint", id: 462062816
+# mas "Microsoft Remote Desktop", id: 1295203466
+# mas "Microsoft Word", id: 462054704
+# mas "Numbers", id: 409203825
+# mas "OmniFocus", id: 1346203938
+# mas "OneDrive", id: 823766827
+# mas "Pages", id: 409201541
+# mas "PopClip", id: 445189367
+# mas "Scrivener 3", id: 1310686187
+# mas "Slack", id: 803453959
+# mas "Spark", id: 1176895641
+# mas "The Unarchiver", id: 425424353
