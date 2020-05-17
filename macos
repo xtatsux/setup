@@ -65,8 +65,8 @@ defaults write com.apple.dock wvous-br-corner -int 5
 defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Screensaver
-defaults -currentHost write com.apple.screensaver showClock -bool false
-defaults -currentHost write com.apple.screensaver idleTime -int 3600
+defaults -currentHost write com.apple.screensaver showClock -bool true
+defaults -currentHost write com.apple.screensaver idleTime -int 600
 defaults -currentHost write com.apple.screensaver moduleDict \
   -dict moduleName Arabesque path "/System/Library/Screen Savers/Arabesque.saver" type 0
 
@@ -88,10 +88,6 @@ defaults write com.apple.screencapture type png
 defaults write com.apple.screencapture disable-shadow -bool true
 mkdir -p ~/Pictures/screenshot
 defaults write com.apple.screencapture location ~/Pictures/screenshot
-
-# Key
-#defaults write NSGlobalDomain InitialKeyRepeat -int 25
-#defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Change system language to English, and Japanese
 defaults write -g AppleLanguages -array en ja
