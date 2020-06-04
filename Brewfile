@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap "aws/tap"
 tap "cloudfoundry/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -13,7 +12,6 @@ brew "ansible"
 brew "autoconf"
 brew "autojump"
 brew "automake"
-brew "awscli"
 brew "boost"
 brew "cmigemo"
 brew "ctags"
