@@ -19,7 +19,7 @@ if [ "$(uname)" == 'Darwin' ]; then
 
 ./macos
 ./brew
-brew bundle install
+# brew bundle install
 fc-cache -vf
 ./install-pam
 
