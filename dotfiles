@@ -14,3 +14,9 @@ done
 
 mkdir -p "$XDG_CACHE_HOME"/vim/{swap,backup,undo}
 mkdir -p "$XDG_DATA_HOME"/vim
+
+# Create fish config directory and symlinks
+mkdir -p ~/fish
+for f in config.fish fishfile; do
+  tools/make-symlink "$target/fish/$f" ~/fish/"$f"
+done
