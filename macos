@@ -19,10 +19,10 @@ fi
 osascript -e 'tell application "System Preferences" to quit'
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%01
 
 # Allow apps downloaded from anyware
-sudo spctl --master-disable
+#sudo spctl --master-disable
 
 # Mute the beep sound
 defaults write NSGlobalDomain com.apple.sound.beep.volume -int 0
